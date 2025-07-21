@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclados - Mr. Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Mr. Tecnología</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="principal.html">Inicio</a></li>
+                <li><a href="audifonos.html">Audífonos</a></li>
+                <li><a href="teclados.html" class="active-page">Teclados</a></li>
+                <li><a href="pantallas.html">Pantallas</a></li>
+                <li><a href="rams.html">RAMs</a></li>
+                <li><a href="arjetas_de_video.html">Tarjetas de Video</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="category-section">
+            <h2>Teclados</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="imagenes/K67.jpg" alt="Teclado Mecánico RGB">
+                    <h3>Teclado Mecánico Pro RGB</h3>
+                    <p>Switches de alta precisión para gaming, retroiluminación RGB personalizable.</p>
+                    <span class="price">$79.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/ergonomico.jpg" alt="Teclado Ergonómico Inalámbrico">
+                    <h3>Teclado Ergonómico</h3>
+                    <p>Diseño cómodo para largas horas de trabajo, conexión inalámbrica y batería de larga duración.</p>
+                    <span class="price">$49.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/compacto.webp" alt="Teclado Compacto 60%">
+                    <h3>Teclado Compacto Gamer</h3>
+                    <p>Formato 60% que ahorra espacio en tu escritorio, ideal para setups minimalistas.</p>
+                    <span class="price">$69.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Carrito de Compras</h2>
+                <button id="close-cart-btn" class="close-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                </div>
+            <div class="cart-summary">
+                <h4>Total: <span id="cart-total-price">$0.00</span></h4>
+                <button id="checkout-btn" class="checkout-btn">Proceder al Pago</button>
+            </div>
+            <div id="payment-form" class="payment-form" style="display: none;">
+                <h3>Información de Pago y Envío</h3>
+                <form id="checkout-form">
+                    <label for="full-name">Nombre Completo:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    
+                    <label for="address">Dirección de Envío:</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="payment-method">Método de Pago:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Seleccione...</option>
+                        <option value="card">Tarjeta de Crédito</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+
+                    <button type="submit" class="pay-btn">Pagar</button>
+                    <button type="button" class="back-to-cart-btn">Volver al Carrito</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mr. Tecnología. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

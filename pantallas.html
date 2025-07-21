@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantallas - Mr. Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Mr. Tecnología</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="principal.html">Inicio</a></li>
+                <li><a href="audifonos.html">Audífonos</a></li>
+                <li><a href="teclados.html">Teclados</a></li>
+                <li><a href="pantallas.html" class="active-page">Pantallas</a></li>
+                <li><a href="rams.html">RAMs</a></li>
+                <li><a href="arjetas_de_video.html">Tarjetas de Video</a></li>
+                <li><a href="#" id="cart-icon" class="cart-icon">🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="category-section">
+            <h2>Pantallas</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="imagenes/ultrawide.webp" alt="Monitor Curvo Ultrawide">
+                    <h3>Monitor Curvo Ultrawide</h3>
+                    <p>Pantalla de 34 pulgadas con curvatura 1000R para una experiencia inmersiva en juegos.</p>
+                    <span class="price">$399.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/4k.jpg" alt="Monitor 4K Profesional">
+                    <h3>Monitor 4K Profesional</h3>
+                    <p>Resolución 4K para detalles nítidos, calibración de color de fábrica para diseñadores.</p>
+                    <span class="price">$499.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/144hz.webp" alt="Monitor Gamer 144Hz">
+                    <h3>Monitor Gamer 144Hz</h3>
+                    <p>Tasa de refresco de 144Hz y tiempo de respuesta de 1ms para una fluidez máxima.</p>
+                    <span class="price">$249.99</span>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Carrito de Compras</h2>
+                <button id="close-cart-btn" class="close-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                </div>
+            <div class="cart-summary">
+                <h4>Total: <span id="cart-total-price">$0.00</span></h4>
+                <button id="checkout-btn" class="checkout-btn">Proceder al Pago</button>
+            </div>
+            <div id="payment-form" class="payment-form" style="display: none;">
+                <h3>Información de Pago y Envío</h3>
+                <form id="checkout-form">
+                    <label for="full-name">Nombre Completo:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    
+                    <label for="address">Dirección de Envío:</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="payment-method">Método de Pago:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Seleccione...</option>
+                        <option value="card">Tarjeta de Crédito</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+
+                    <button type="submit" class="pay-btn">Pagar</button>
+                    <button type="button" class="back-to-cart-btn">Volver al Carrito</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mr. Tecnología. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
